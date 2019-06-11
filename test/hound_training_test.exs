@@ -73,4 +73,13 @@ defmodule HoundTrainingTest do
     fill_field({:id, "edit-submitted-message"}, "This is a very serious issue.")
     Process.sleep(1000)
   end
+
+  test "radio selections again" do
+    navigate_to("https://www.ultimateqa.com/simple-html-elements-for-automation/")
+    Process.sleep(2000)
+    click({:css, ".et_pb_blurb_description > form > input[value='male']"})
+    Process.sleep(2000)
+    click({:css, "input[value='female']"})
+    Process.sleep(2000)
+  end
 end
